@@ -49,11 +49,17 @@ header {
     text-align: center;
  }
 
+ .home-section .container {
+
+   margin: 50px;
+ }
+
  .home-section .container ul{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-top: 50px;
    
  }
 
