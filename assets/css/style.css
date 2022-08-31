@@ -7,10 +7,12 @@
  }
 
 
-
-.logo {
+/*===========header-section================*/
+.logo_img {
     width:40%;
 }
+
+
 header {
     display: flex;
     flex-direction: row;
@@ -35,9 +37,24 @@ header {
 
  }
 
-.product_img {
-    width: 80px;
+
+
+.container_head {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   background-color:whitesmoke;
+   padding: 0.5em 2em;
 }
+
+ section .hero_section {
+   background-color: red;
+   height: 50px;
+   width: 100px;
+ }
+
+
 
 
 .addtocart {
@@ -49,7 +66,7 @@ header {
     text-align: center;
  }
 
- .home-section .container {
+ .container {
 
    margin: 50px;
  }
@@ -58,10 +75,20 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 50px;
    
  }
+
+
+ .jfy_section ul{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-around;
+   margin-top: 50px;
+  
+}
 
 .product_list {
 
@@ -69,18 +96,17 @@ header {
    flex-direction: column;
    justify-content:center;
    align-items: center;
-   width: 250px;
-   height: 350px;
+   width: 150px;
+   height: 250px;
    background-color: #f2f2f2;
    
 }
 
 
 ul .product_img {
-
-   width: 200px;
-   height: 200px;
-   margin: 37px 0 0 7px;
+   width: 100px;
+   height: 100px;
+   /* margin: 37px 0 0 7px; */
 }
 
 footer .footer_sec {
@@ -116,6 +142,8 @@ footer p {
 
    .product_list {
       margin-top: 50px;
+      width: 150px;
+      height: 250px;
 
    }
 
