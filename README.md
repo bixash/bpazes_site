@@ -1,7 +1,6 @@
 # ecom_site
-E-Commerce site
 
-Challenge: Create an E-Commerce Platform for "Jeans Pants"
+### Challenge: Create an E-Commerce Platform for "Jeans Pants"
 
 FrontEnd: Javascript, HTML5, CSS3 (Use SASS) - Use FLEX, GRID [The site should be mobile friendly]
 
