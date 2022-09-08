@@ -1,4 +1,11 @@
-let product_sales = document.getElementById('product_sales');
+let product_sales = document.getElementById("product_sales");
+let featuredProduct = document.getElementById('featured-product')
+let forYou= document.getElementById('justProduct');
+
+
+
+
+
 
 let shopItemsData =[{
     id: 'h3u3432iu',
@@ -49,6 +56,42 @@ function generateShop () {
     return (product_sales.innerHTML = shopItemsData.map((x)=> {
         let {name, price, img, id,} = x;
 
+       return `<div id="product-id-${id}" class="product_list" >
+            <img class="product_img" src=${img} alt="" srcset="">
+
+                <div class="product_name">${name}</div>
+
+                <div class="price">Rs.${price} </div>
+
+                
+            </div>`
+
+    }).join(""));
+
+};
+function generateFeatured() {
+
+    return (featuredProduct.innerHTML = shopItemsData.map((x)=> {
+        let {name, price, img, id,} = x;
+
+       return `<div id=product-id-${id} class="product_list">
+            <img class="product_img" src=${img} alt="" srcset="">
+
+                <div class="product_name">${name}</div>
+
+                <div class="price">Rs.${price} </div>
+
+                
+            </div>`
+
+    }).join(""));
+
+};
+function generateJust() {
+
+    return (forYou.innerHTML = shopItemsData.map((x)=> {
+        let {name, price, img, id,} = x;
+
        return `<div id=product-id-${id} class="product_list">
             <img class="product_img" src=${img} alt="" srcset="">
 
@@ -63,4 +106,15 @@ function generateShop () {
 
 };
 
+generateJust();
 generateShop();
+generateFeatured();
+
+product_sales.addEventListener('click', ()=>{
+    
+    location.href = '../html/product.html';
+});
+
+function URL() {
+    
+}
