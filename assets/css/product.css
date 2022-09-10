@@ -1,17 +1,166 @@
 .product-info {
 
-  background:white;
+  margin: 3em auto;
+  width: 91%;
+  
+  
+}
+
+.product-display {
+  display: block;
+}
+
+@media (min-width: 700px) {
+  .product-info {
+    width: 60%;
+    margin: 3em auto;
+  }
+  
 }
 
 .product-container {
   display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  flex-direction: row;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  background:white;
+  height: 70vh;
+
+}
+
+.product-text {
+  position: relative;
+  width: 300px;
+  /* margin-left: 1em; */
+  /* background-color: aqua; */
 }
 
 .product-info-img {
-  width: 330px;
-  height: 330px;
+  width: 230px;
 }
 
 .product-btns {
-  margin-top: 20px;
+  display: flex; 
+  justify-content: space-between;
+  width: 200px;
+  bottom: -80px;
+  left: -100px;
+ 
+  position: absolute;
+  /* background-color: red; */
+  
+  /* margin-top: 20px; */
+}
+
+@media (min-width: 1000px) {
+
+  .product-info-img {
+    width: 250px;
+    height: 300px;
+  }
+  .product-container {
+    height: 80vh;
+  }
+
+
+  .product-btns {
+    
+    
+    bottom: -110px;
+    
+    /* background-color: red; */
+    
+    /* margin-top: 20px; */
+  }
+  
+  .product-text {
+   
+    margin-left: 8em;
+    /* background-color: aqua; */
+  }
+}
+
+
+.quantity-box {
+  margin: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 40px);
+  text-align: center
+  /* background-color: #f2f; */
+
+  
+}
+
+.plus , .minus {
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 0.15em;
+  border-radius: 0.23em;
+  color: gray;
+
+}
+
+
+
+.product-name {
+  height: 36px;
+  line-height: 18px;
+  margin: 0.5em 0em; 
+  /* background-color: #ff5404; */
+  padding-left: 0.5em;
+  font-size: 21px;
+  text-align: left;
+  margin: 0;
+ 
+  
+}
+
+.product-price {
+  font-size: 25px;
+  width: 180px;
+  padding-left: 0.5em;
+  /* background-color: #ff5404; */
+  margin-bottom: 4px;
+  color: #f85606;
+  letter-spacing: -.56px;
+  line-height: 22px;
+  height: 22px;
+}
+
+.descrip {
+  margin-top: 1em ;
+  margin-left: 1em;
+  font-size: 14px;
+
+}
+
+
+
+.buynow {
+  margin-top: 1em;
+  max-width: fit-content;
+  padding: 0.5em;
+  text-align: center;
+  border-radius: 0.5em;
+  background-color: #2abbe8;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+
+.addtocart {
+  margin-top: 1em;
+  max-width: fit-content;
+  padding: 0.5em;
+  text-align: center;
+  border-radius: 0.5em;
+  background-color: #f85606;
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-size: 16px;
+  
 }

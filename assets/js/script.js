@@ -1,6 +1,7 @@
 let product_sales = document.getElementById("product_sales");
 let featuredProduct = document.getElementById('featured-product')
-let forYou= document.getElementById('justProduct');
+let forYou = document.getElementById('justProduct');
+
 
 
 
@@ -59,7 +60,7 @@ function generateShop () {
        return `<div id="product-id-${id}" class="product_list" >
             <img class="product_img" src=${img} alt="" srcset="">
 
-                <div class="product_name">${name}</div>
+                <div class="name">${name}</div>
 
                 <div class="price">Rs.${price} </div>
 
@@ -77,7 +78,7 @@ function generateFeatured() {
        return `<div id=product-id-${id} class="product_list">
             <img class="product_img" src=${img} alt="" srcset="">
 
-                <div class="product_name">${name}</div>
+                <div class="name">${name}</div>
 
                 <div class="price">Rs.${price} </div>
 
@@ -95,7 +96,7 @@ function generateJust() {
        return `<div id=product-id-${id} class="product_list">
             <img class="product_img" src=${img} alt="" srcset="">
 
-                <div class="product_name">${name}</div>
+                <div class="name">${name}</div>
 
                 <div class="price">Rs.${price} </div>
 
@@ -113,8 +114,5 @@ generateFeatured();
 product_sales.addEventListener('click', ()=>{
     
     location.href = '../html/product.html';
-});
 
-function URL() {
-    
-}
+});
