@@ -1,6 +1,8 @@
 let quantity = document.getElementById("quantity");
 let productInfo = document.getElementById('product-info');
 
+let buyNow = document.getElementById("buynow");
+console.log(buyNow);
 
 
 generateProduct();
@@ -30,7 +32,7 @@ function generateProduct() {
             
 
             <div class="product-btns">
-                <button class="buynow">Buy Now</button>
+                <button class="buynow" id="buynow" onclick="Now()">Buy Now</button>
                 <button class="addtocart">Add to cart</button>
             </div>
             
@@ -39,4 +41,12 @@ function generateProduct() {
     </div>`
 }
 
+
+function Now(){
+
+    location.href = '../html/buy.html';
+ 
+
+
+}
 
