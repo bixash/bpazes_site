@@ -5,56 +5,14 @@
     
 
 
-    let basket = [];
-
-
-
-
-
-    let shopItemsData = [{
-        id: 'qw32iu',
-        name: 'Myntra Light Blue Premium Baggy Jeans For Men ',
-        price: 2500,
-        img: "../assets/img/product.jpg"
-    },
-    {
-        id: 'hqq354u32iu',
-        name: 'Black Skinny Knee Cut Jeans Pants For Men',
-        price: 2500,
-        img: "../assets/img/product.jpg"
-    },
-    {
-        id: 'hibbu',
-        name: 'Nyptra Dark Blue Oversize High Rise Stretchable Jeans For Women',
-        price: 500,
-        img: "../assets/img/product.jpg"
-    },
-    {
-        id: 'g2iu',
-        name: 'Rocky Denim Jeans Pant For Women',
-        price: 12500,
-        img: "../assets/img/product.jpg"
-    },
-    {
-        id: 'u3g2iu',
-        name: 'Rocky Denim Jeans Pant For Women',
-        price: 12500,
-        img: "../assets/img/product.jpg"
-    },
-
-    {
-        id: 'ee32iu',
-        name: 'Nyptra Blue Oversize High Rise Stretchable Jeans For Women',
-        price: 25300,
-        img: "../assets/img/product.jpg"
-    }];
-
+    let basket = JSON.parse(localStorage.getItem("data")) || [];
 
     function generateShop() {
 
         return (product_sales.innerHTML = shopItemsData.map((x) => {
             let { name, price, img, id, } = x;
 
+            let search = basket.find((x)=> x.item === id);
             return `<div id="product-id-${id}" class="product_list" >
             <img class="product_img" src=${img} alt="" srcset="">
 
@@ -128,7 +86,11 @@ function increment(id)  {
         search.item += 1;
     }
 
+    
+
     update(selectedItem.id);
+
+    localStorage.setItem("data", JSON.stringify(basket));
 
 };
 
@@ -137,6 +99,10 @@ function decrement(id)  {
     let selectedItem = id;
     let search = basket.find((x)=> x.id === selectedItem.id);
 
+    if(search === undefined) {
+        return;
+    }
+    
     if (search.item === 0) {
         return;
     }
@@ -144,13 +110,17 @@ function decrement(id)  {
         search.item -= 1;
     }
    
+
     update(selectedItem.id);
 
+    basket = basket.filter((x)=>x.item !== 0);
+
+    localStorage.setItem("data", JSON.stringify(basket));
 };
 
 
 let update = (id) => {
-    /// update the amount number
+    /// update the quantity number
     let search = basket.find((x)=> x.id === id);
 
     
@@ -168,10 +138,8 @@ let calculation = () => {
     cartTotal.innerHTML = basket.map((x)=> x.item).reduce((x , y)=> x + y, 0);
     
 
-
-
 };
 
-
+calculation();
 
 
