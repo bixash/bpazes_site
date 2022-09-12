@@ -356,7 +356,7 @@ nav {
 }
 
 .name {
-   height: 36px;
+   height: 38px;
    line-height: 18px;
    font-size: 14px;
    margin: 0.5em 0em; 
@@ -377,7 +377,19 @@ nav {
    height: 22px;
 
 }
-
+.addtocart {
+   margin: 0.5em 0;
+   max-width: fit-content;
+   padding: 0.3em;
+   text-align: center;
+   border-radius: 0.2em;
+   background-color: #f85606;
+   cursor: pointer;
+   border: none;
+   color: white;
+   font-size: 16px;
+   
+ }
 
 .cart {
    
