@@ -1,164 +1,122 @@
 
  
  
- /*======================*/
 
-.section-header {
-    margin: 1em;
-    color: #424242;
-}
-.cart-section {
-    width: 100%;
-    
-    /* padding: 1em; */
-    /* margin: 1em; */
 
+  
  
+
+.continue-shop {
+    background-color: #ff5404;
+    color: white;
+    margin-top: 20px;   
+    padding: 0.5em;
+    border-radius: 3px;
+    border: none;
+    font-size: 22px;
+}
+.cart-label {
+    margin-top: 2em;
+    text-align: center;
+}
+.label {
+    color: grey;
 }
 
-.cart-container {
-    /* background-color: crimson; */
-    background-color: white;
-    width: 100%;
-    padding: 1em 0em;
-    margin: 1em auto;
-}
-
-.cart-header {
-    /* font-weight: bold; */
-    /* padding: 1em; */
-    font-size: 16px;
-    color: #333;
-    /* text-align:left; */
-}
-
-.cart-column {
-    display: flex;
+.bucket-list {
+    display: grid;
+    grid-template-columns: repeat(1, 470px);
+    justify-content: center;
+    gap: 15px;
     
-    /* justify-content: center; */
-    width: 100px;
-    align-items: center;
-    /* border-bottom: 1px solid black; */
-    margin-right: 20px;
-    padding-bottom: 10px;
-    margin-top: 10px;
-    /* background-color: black; */
-    
-}
 
-.cart-row {
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    /* background-color: blue; */
-    margin: 2em;
-}
+ }
 
+.item-details {
+    /* background-color: red; */
+    /* display: flex; */
+    padding: 0.7em 0.9em;
+}
 
 .cart-item {
+
     display: flex;
-    flex-direction: column;
-    /* background-color: aquamarine; */
-    /* width: 40%; */
-}
-
-.cart-price {
-    width: 100px;
-    font-size: 15px;
-    color: #ff5404;
-    /* background-color: blueviolet; */
-    text-align: center;
-}
-
-/* .cart-quantity {
-    width: 35%;
-} */
-
-.cart-item-title {
-    margin-top: .5em;
-    color: #333;
-   
-    font-size: 16px;
-}
-
-.cart-item-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 0px;
-}
-
-.btn-danger {
-    display: flex;
-    width: 20px;
-    align-items: center;
     background-color: white;
-    color: #888888;
-    border: none;
-    font-size: 18px;
+    /* border: 1px solid black; */
+    border-radius: 0.2em;
+
+   
 }
 
-/* .btn-danger:hover {
-    background-color: #CC4C4C;
-} */
+.cart-item:hover {
 
-.cart-quantity-input {
-    height: 34px;
-    width: 44px;
-    border-radius: 5px;
-    border: none;
-  
-    background-color: #eee;
-    color: #333;
-    padding: 0;
-    text-align: center;
-    font-size: 16px;
-    margin-right: 25px;
+    box-shadow: 3px 3px 6px #888888;
+
 }
 
-/* .cart-row:last-child {
-    border-bottom: 1px solid black;
-} */
-
-.cart-row:last-child .cart-column {
-    border: none;
-}
-
-.cart-total {
+.title-price-x {
+    width: 310px;
+    /* background-color: red; */
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 2em;
-    margin-top: 10px;
-    margin-right: 10px;
-    /* background-color: #2abbe8; */
-}
-
-.cart-total-title {
-    display: block;
-    font-size: 20px;
-    font-weight: none;
-    margin-right: 20px;
-}
-
-.cart-total-price {
-    color: #ff5404;
-    font-size: 16px;
-}
-.btn-purchase {
-    border-radius: 3px;
-    background-color: #2abbe8;
-    color: #ffffff;
-    border: none;
-    width: 100px;
-    margin: 0.5em auto;
-    font-size: 1em;
-}
-.quantity-box {
-    margin: 1em;
-    display: grid;
-    grid-template-columns: repeat(3, 40px);
-    text-align: center
-    /* background-color: #f2f; */
+    justify-content: space-between;
   
     
+    
+}
+
+.bi-x-lg {
+    color: grey;
+    font-size: bold;
+}
+.title-price {
+    width: 100%;
+    /* display: flex; */
+    /* align-items: center; */
+    /* background-color: red; */
+}
+
+.cart-name {
+    width: 280px;
+    height: 34px;
+    overflow: hidden;
+    font-size: 14px;
+    /* background-color: blue; */
+    
+}
+.cart-price {
+    margin-top: 0.5em;
+    color: #ff5404;
+
+}
+.quantity-box {
+    margin-top: 0.7em;
+    max-width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, 25px);
+    justify-content: center;
+    text-align: center;
+    /* background-color: #2f2f2f; */
+    color: #4b4b4b;
+
+    
   }
+.quantity {
+    padding: 2px;
+    /* background-color: red; */
+}
+  .plus, .minus {
+    background-color: #f2f2f2;
+    border-radius: 2px;
+    padding: 2px;
+    color: grey;
+  }
+
+.plus:hover {
+    background-color: #e2e2e2;
+    
+}
+.minus:hover {
+
+    background-color: #e2e2e2;
+}
+

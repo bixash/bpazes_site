@@ -12,7 +12,8 @@
         return (product_sales.innerHTML = shopItemsData.map((x) => {
             let { name, price, img, id, } = x;
 
-            let search = basket.find((x)=> x.item === id);
+            let search = basket.find((x)=> x.id === id); // this is for quantity count and update
+            
             return `<div id="product-id-${id}" class="product_list" >
             <img class="product_img" src=${img} alt="" srcset="">
 
@@ -122,7 +123,7 @@ function decrement(id)  {
 let update = (id) => {
     /// update the quantity number
     let search = basket.find((x)=> x.id === id);
-
+    document.getElementById(id).innerHtml = search.item;
     
     calculation();
 
@@ -131,7 +132,7 @@ let update = (id) => {
 
 let calculation = () => {
 
-    /// Update cart total number
+    /// Updates the cart icon total number
 
     let cartTotal = document.getElementById("cartTotal");
 
