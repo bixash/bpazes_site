@@ -70,7 +70,7 @@ let generateCart = ()=>  {
         cartLabel.innerHTML = 
         ` <div class="label"> There are no items in this cart.</div>
 
-            <a href="../html/index.html">
+            <a href="../../index.html">
 
                 <button class="continue-shop">Continue shopping</button>
             </a>
