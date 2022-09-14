@@ -3,6 +3,7 @@ let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let cartLabel = document.getElementById("cart-label");
 let bucketList = document.getElementById("bucket-list");
+let totalCheckout = document.getElementById("total-checkout");
 
 
 let calculation = () => {
@@ -153,6 +154,7 @@ let removeItem = (id)=> {
     localStorage.setItem("data", JSON.stringify(basket));
     generateCart();
     calculation();
+    totalAmount();
 }
 
 let totalAmount = ()=> {
@@ -165,10 +167,27 @@ let totalAmount = ()=> {
             
         }).reduce((x,y)=> x+y, 0);
 
-        console.log(amount);
+        cartLabel.innerHTML= `
+                <h3><span>Total:</span> Rs.${amount}</h3>
+                <div class="total-price"></div>
+
+                <div class="cart-btns">
+                    <a href="../../html/buy.html"<button class="buynow" id="buynow">Buy Now</button> </a>
+                    <button class="clear-cart" id="clear-cart" onclick="clearCart()">Clear Cart</button>
+
+                </div>
+            `
+        // console.log(amount);
     }
     else return;
     
 }
 
 totalAmount();
+
+let clearCart = () => {
+    basket = [];
+    localStorage.setItem("data", JSON.stringify(basket));
+    generateCart();
+    calculation();
+}

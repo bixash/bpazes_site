@@ -1,10 +1,61 @@
 
- 
- 
+/* .buy-section {
+    background-color: red;
+} */
+.total-checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    margin: 1em auto;
+    padding: 1em;
+    justify-content: center;
+    color: #ff5404;
+    /* background-color:red; */
+
+}
+
+h3 {
+    font-size: 21px;
+    font-weight: 400;
+
+}
+h3 span {
+    font-size: 22px;
+    padding-right: 0.3em;
+    color: #414141;
+    font-weight: 590;
+}
+
+.cart-btns {
+    /* background-color: red; */
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    
+}
+.buynow, .clear-cart {
+    margin-top: 0.5em;
+    max-width: fit-content;
+    padding: 0.5em;
+    text-align: center;
+    border-radius: 0.5em;
+    background-color: #2abbe8;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+  }
 
 
-  
- 
+.clear-cart {
+    background-color: #ff5404;
+}
+.clear-cart:hover {
+    box-shadow: 3px 3px 6px #888888;
+}
+.buynow:hover {
+    box-shadow: 3px 3px 6px #888888;
+}
 
 .continue-shop {
     background-color: #ff5404;
@@ -13,13 +64,14 @@
     padding: 0.5em;
     border-radius: 3px;
     border: none;
-    font-size: 22px;
+    font-size: 16px;
 }
 .cart-label {
     margin-top: 2em;
     text-align: center;
 }
 .label {
+    margin-top: 8em;
     color: grey;
 }
 
@@ -28,9 +80,15 @@
     grid-template-columns: repeat(1, 470px);
     justify-content: center;
     gap: 15px;
+    margin-bottom: 3em;
+
+    /* height: 100vh; */
+    /* background-color: red; */
     
 
  }
+
+
 
 .item-details {
     /* background-color: red; */
@@ -42,11 +100,45 @@
 
     display: flex;
     background-color: white;
+    width: 400px;
     /* border: 1px solid black; */
     border-radius: 0.2em;
+    margin: 0 auto;
 
    
 }
+.title-price-x {
+    width: 240px;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #2abbe8; */
+    
+}
+
+.title-price {
+    width: 200px;
+    /* background-color: aqua; */
+    
+}
+
+@media (min-width: 700px) {
+    .cart-item  {
+        width: 500px;
+   
+    
+     }
+
+     .title-price-x {
+        width: 340px;
+        /* background-color: #2abbe8; */
+       
+    }
+    .title-price {
+        width: 300px;
+        /* background-color: aqua; */
+        
+    }
+ }
 
 .cart-item:hover {
 
@@ -54,29 +146,16 @@
 
 }
 
-.title-price-x {
-    width: 310px;
-    /* background-color: red; */
-    display: flex;
-    justify-content: space-between;
-  
-    
-    
-}
 
 .bi-x-lg {
     color: grey;
     font-size: bold;
-}
-.title-price {
-    width: 100%;
-    /* display: flex; */
-    /* align-items: center; */
-    /* background-color: red; */
+    
 }
 
+
 .cart-name {
-    width: 280px;
+    /* width: 240px; */
     height: 34px;
     overflow: hidden;
     font-size: 14px;

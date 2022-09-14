@@ -15,12 +15,14 @@
             let search = basket.find((x)=> x.id === id); // this is for quantity count and update
             
             return `<div id="product-id-${id}" class="product_list" >
-            <img class="product_img" src=${img} alt="" srcset="">
+            <img class="product_img" src=${img} alt="" loading="lazy" srcset="">
 
                 <div class="name">${name}</div>
-
-                <div class="price">Rs.${price} </div>
-                <button class="addtocart" onclick="increment(${id})" id=${id}>Add to cart</button>
+                <div class="cart-add-price">
+                 <div class="price">Rs.${price} </div>
+                 <button class="addtocart" onclick="increment(${id})" id=${id}><i class="bi bi-bag-check-fill"></i></button>
+                </div>
+                
 
                 
             </div>`;
@@ -30,7 +32,7 @@
 
     function generateFeatured() {
 
-        return (featuredProduct.innerHTML = shopItemsData.map((x) => {
+        return (featuredProduct.innerHTML = featuredItemsData.map((x) => {
             let { name, price, img, id, } = x;
 
             return `<div id=product-id-${id} class="product_list">
@@ -49,7 +51,7 @@
     };
     function generateJust() {
 
-        return (forYou.innerHTML = shopItemsData.map((x) => {
+        return (forYou.innerHTML = justItemsData.map((x) => {
             let { name, price, img, id, } = x;
 
             return `<div id=product-id-${id} class="product_list">
