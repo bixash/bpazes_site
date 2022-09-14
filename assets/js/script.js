@@ -1,4 +1,4 @@
-    let product_sales = document.getElementById("product_sales");
+    let product_sales = document.getElementsByClassName("product_sales");
     
     // let featuredProduct = document.getElementById('featured-product');
     // let forYou = document.getElementById('justProduct');
@@ -9,7 +9,7 @@
 
     function generateShop() {
 
-        return (product_sales.innerHTML = shopItemsData.map((x) => {
+        return (product_sales[0].innerHTML = shopItemsData.map((x) => {
             let { name, price, img, id, } = x;
 
             let search = basket.find((x)=> x.id === id); // this is for quantity count and update
@@ -32,16 +32,18 @@
 
     function generateFeatured() {
 
-        return (featuredProduct.innerHTML = featuredItemsData.map((x) => {
+        return (product_sales[1].innerHTML = featuredItemsData.map((x) => {
             let { name, price, img, id, } = x;
 
-            return `<div id=product-id-${id} class="product_list">
-            <img class="product_img" src=${img} alt="" srcset="">
+            return `<div id="product-id-${id}" class="product_list" >
+            <img class="product_img" src=${img} alt="" loading="lazy" srcset="">
 
                 <div class="name">${name}</div>
-
-                <div class="price">Rs.${price} </div>
-                <button class="addtocart" id ="addtocart">Add to cart</button>
+                <div class="cart-add-price">
+                 <div class="price">Rs.${price} </div>
+                 <button class="addtocart" onclick="increment(${id})" id=${name}-${id}><i class="bi bi-bag-check-fill"></i></button>
+                </div>
+                
 
                 
             </div>`;
@@ -51,16 +53,19 @@
     };
     function generateJust() {
 
-        return (forYou.innerHTML = justItemsData.map((x) => {
+        return (product_sales[2].innerHTML = justItemsData.map((x) => {
             let { name, price, img, id, } = x;
 
-            return `<div id=product-id-${id} class="product_list">
-                <img class="product_img" src=${img} alt="" srcset="">
+            return `<div id="product-id-${id}" class="product_list" >
+            <img class="product_img" src=${img} alt="" loading="lazy" srcset="">
 
                 <div class="name">${name}</div>
+                <div class="cart-add-price">
+                 <div class="price">Rs.${price} </div>
+                 <button class="addtocart" onclick="increment(${id})" id=${name}-${id}><i class="bi bi-bag-check-fill"></i></button>
+                </div>
+                
 
-                <div class="price">Rs.${price} </div>
-                <button class="addtocart">Add to cart</button>
                 
             </div>`;
 
@@ -68,9 +73,9 @@
 
     };
 
-    // generateJust();
+    generateJust();
     generateShop();
-    // generateFeatured();
+    generateFeatured();
 
 
 
@@ -88,7 +93,7 @@ function increment(id)  {
     else {
         search.item += 1;
     }
-
+     
     
 
     update(selectedItem.id);

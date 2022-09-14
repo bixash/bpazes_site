@@ -27,23 +27,21 @@ let generateCart = ()=>  {
         return (bucketList.innerHTML = basket.map((x)=> {
             
             let{id, item} = x;
-            let search = shopItemsData.find((y)=> y.id === id ||[]);
-
-            //let totalAmt = search.price * item; //this also 
-            // console.log(totalAmt);
-           
+            console.log(id);
+            let search = shopItemsData.find((y)=> y.id === id) ||[];
+            let {img,name,price} = search;
             return `
             <div class="cart-item"> 
                 
-                <img  width = "130px" height ="130px" src=${search.img} >
+                <img  width = "130px" height ="130px" src=${img} >
 
                 <div class="item-details">
                     
                     <div class="title-price-x">
 
                             <div class="title-price">
-                                <div class="cart-name">${search.name}</div>
-                                <div class="cart-price">Rs.${search.price}</div>
+                                <div class="cart-name">${name}</div>
+                                <div class="cart-price">Rs.${price}</div>
                             </div>
 
                             <i onclick="removeItem(${id})"class= "bi bi-x-lg"></i>
