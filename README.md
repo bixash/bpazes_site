@@ -1,8 +1,8 @@
-# ecom_site
+# E-commerce Website 
 
 ### Challenge: Create an E-Commerce Platform for "Jeans Pants"
-
-FrontEnd: Javascript, HTML5, CSS3 (Use SASS) - Use FLEX, GRID [The site should be mobile friendly]
+## Website: [bixash.github.io/bpazes_sites](https://bixash.github.io/bpazes_site/)
+FrontEnd: Javascript, HTML5, CSS3 - Use FLEX, GRID [The site should be mobile friendly]
 
 - Create a form to add Jeans with details like title, description, price, and image [For simplicity, you can just give links of images instead of doing the upload feature (which might be a little complex) or you can make an upload module. 
 
@@ -15,3 +15,5 @@ FrontEnd: Javascript, HTML5, CSS3 (Use SASS) - Use FLEX, GRID [The site should b
 - Create a cart page, that includes, added products and the BUY button. 
 
 - When the user clicks on the BUY button, it should open the form where the user can fill in details like "Name", "Phone Number" and "Email"
+
+
