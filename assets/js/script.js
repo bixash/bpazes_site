@@ -30,27 +30,6 @@
         }).join(""));
     };
 
-    function generateFeatured() {
-
-        return (product_sales[1].innerHTML = featuredItemsData.map((x) => {
-            let { name, price, img, id, } = x;
-
-            return `<div id="product-id-${id}" class="product_list" >
-            <img class="product_img" src=${img} alt="" loading="lazy" srcset="">
-
-                <div class="name">${name}</div>
-                <div class="cart-add-price">
-                 <div class="price">Rs.${price} </div>
-                 <button class="addtocart" onclick="increment(${id})" id=${name}-${id}><i class="bi bi-bag-check-fill"></i></button>
-                </div>
-                
-
-                
-            </div>`;
-
-        }).join(""));
-
-    };
     function generateJust() {
 
         return (product_sales[2].innerHTML = justItemsData.map((x) => {
@@ -72,9 +51,33 @@
         }).join(""));
 
     };
+    function generateFeatured() {
 
-    generateJust();
+        return (product_sales[1].innerHTML = featuredItemsData.map((x) => {
+            let { name, price, img, id, } = x;
+            
+
+            return `<div id="product-id-${id}" class="product_list" >
+            <img class="product_img" src=${img} alt="" loading="lazy" srcset="">
+
+                <div class="name">${name}</div>
+                <div class="cart-add-price">
+                 <div class="price">Rs.${price} </div>
+                 <button class="addtocart" onclick="increment(${id})" id=${name}-${id}><i class="bi bi-bag-check-fill"></i></button>
+                </div>
+                
+
+                
+            </div>`;
+
+        }).join(""));
+
+    };
+    
+
+    
     generateShop();
+    generateJust();
     generateFeatured();
 
 
@@ -135,7 +138,6 @@ let update = (id) => {
     calculation();
 
 };
-
 
 let calculation = () => {
 
