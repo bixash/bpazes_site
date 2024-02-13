@@ -1,3 +1,4 @@
+window.onload = (event) => {
     let product_sales = document.getElementsByClassName("product_sales");
     
     // let featuredProduct = document.getElementById('featured-product');
@@ -151,5 +152,8 @@ let calculation = () => {
 };
 
 calculation();
+   
+};
+   
 
 
